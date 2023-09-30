@@ -1,4 +1,7 @@
 {
     "TOKEN":"MTE1NzY0OTg0Nzg4NTc3MDg4Mw.GXiMPf.nfS20TtOvcMXItrNLwI5nFugtH5NuroBDUt2F4",
-    "Channel":"1157653005324255296"
+    "Channel":"1157653005324255296",
+    "pic":["D:\\work_space\\Discord_BasicBot\\台積電 日線走勢圖.png","D:\\work_space\\Discord_BasicBot\\鴻海 日線走勢圖.png"],
+    "url_pic":["https://imgs.madamefigaro.hk/wp-content/uploads/2022/10/MEME-2.jpeg",
+               "https://imgs.madamefigaro.hk/wp-content/uploads/2022/10/meme-3-800x450.jpeg"]
 }

@@ -10,7 +10,7 @@ class Main(Cog_Extension):
     
     @commands.command()                              #ping顯示
     async def hi(selF,ctx):
-        await ctx.send(F'abcd')
+        await ctx.send(F'abc1')
 
 async def setup(bot):
     await bot.add_cog(Main(bot))

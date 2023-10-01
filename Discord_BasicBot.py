@@ -1,12 +1,10 @@
-from discord.ext import commands
 import discord
-import asyncio
+from discord.ext import commands
 import json
-import random
-import aiohttp
-import io
+import os
+import asyncio
 
-with open("D:\work_space\Discord_BasicBot\setting.json",'r',encoding='utf-8') as jfile:
+with open("setting.json",'r',encoding='utf-8') as jfile:
     jdata=json.load(jfile)
 
 intents = discord.Intents.default()
@@ -29,17 +27,29 @@ async def on_member_remove(member):                 #成員離開
     chanel=bot.get_channel(int(jdata["Channel"]))
     await chanel.send(F'{member}leave!')
 
-@bot.command()                                      #ping顯示
-async def ping(ctx):
-    await ctx.send(F'{round(bot.latency*1000)}(ms)')
+@bot.command()
+async def load(ctx,extension):                      #載入類別
+    await bot.load_extension(f'cmds.{extension}')
+    await ctx.send(f'Loaded {extension} done.')
 
-@bot.command()                                      #隨機本機照片
-async def randomPicture(ctx):
-    pic=discord.File(random.choice(jdata['pic']))
-    await ctx.send(file=pic)
+@bot.command()
+async def unload(ctx,extension):                    #卸載類別
+    await bot.unload_extension(f'cmds.{extension}')
+    await ctx.send(f'Un - Loaded {extension} done.')
 
-@bot.command()                                      #隨機網路照片
-async def webPicture(ctx):
-    await ctx.send(random.choice(jdata['url_pic']))
+@bot.command()
+async def reload(ctx,extension):                    #重整類別
+    await bot.reload_extension(f'cmds.{extension}')
+    await ctx.send(f'Re - Loaded {extension} done.')
 
-bot.run(jdata["TOKEN"])                             #bot執行
+async def load_extensions():
+    for filename in os.listdir("cmds"):
+        if filename.endswith('.py'):
+            await bot.load_extension(f'cmds.{filename[:-3]}')
+
+async def main():
+    await load_extensions()                         #執行load_extensions
+    await bot.start(jdata["TOKEN"])                 #bot執行
+
+if __name__ == '__main__':
+    asyncio.run(main())

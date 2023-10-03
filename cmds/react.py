@@ -4,7 +4,7 @@ from core.classes import Cog_Extension
 import random
 import json
 
-with open("D:\work_space\Discord_BasicBot\setting.json",'r',encoding='utf-8') as jfile:
+with open("setting.json",'r',encoding='utf-8') as jfile:
     jdata=json.load(jfile)
 
 class React(Cog_Extension):

@@ -18,18 +18,6 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():                               
     print(f'We have logged in as {bot.user}')
 
-#成員進入
-@bot.event                                          
-async def on_member_join(member):                   
-    chanel=bot.get_channel(int(jdata["Channel"]))
-    await chanel.send(F'{member}join!')
-
-#成員離開
-@bot.event
-async def on_member_remove(member):                 
-    chanel=bot.get_channel(int(jdata["Channel"]))
-    await chanel.send(F'{member}leave!')
-
 #載入類別
 @bot.command()
 async def load(ctx,extension):                      

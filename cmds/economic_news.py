@@ -34,7 +34,6 @@ class Economic_News(Cog_Extension):
                         if(count==3):
                             break
                     #await meg.delete()
-                
             else:
                 print("無法獲取頁面內容")
     

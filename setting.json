@@ -1,7 +1,13 @@
 {
-    "TOKEN":"MTE1NzY0OTg0Nzg4NTc3MDg4Mw.GXiMPf.nfS20TtOvcMXItrNLwI5nFugtH5NuroBDUt2F4",
-    "Channel":"1157653005324255296",
-    "pic":["D:\\work_space\\Discord_BasicBot\\picture\\台積電 日線走勢圖.png","D:\\work_space\\Discord_BasicBot\\picture\\鴻海 日線走勢圖.png"],
-    "url_pic":["https://imgs.madamefigaro.hk/wp-content/uploads/2022/10/MEME-2.jpeg",
-               "https://imgs.madamefigaro.hk/wp-content/uploads/2022/10/meme-3-800x450.jpeg"]
+    "TOKEN": "MTE1NzY0OTg0Nzg4NTc3MDg4Mw.GXiMPf.nfS20TtOvcMXItrNLwI5nFugtH5NuroBDUt2F4",
+    "Channel": "1157653005324255296",
+    "Time": "11/4/23 11:30:00",
+    "pic": [
+        "D:\\work_space\\Discord_BasicBot\\picture\\\u53f0\u7a4d\u96fb \u65e5\u7dda\u8d70\u52e2\u5716.png",
+        "D:\\work_space\\Discord_BasicBot\\picture\\\u9d3b\u6d77 \u65e5\u7dda\u8d70\u52e2\u5716.png"
+    ],
+    "url_pic": [
+        "https://imgs.madamefigaro.hk/wp-content/uploads/2022/10/MEME-2.jpeg",
+        "https://imgs.madamefigaro.hk/wp-content/uploads/2022/10/meme-3-800x450.jpeg"
+    ]
 }

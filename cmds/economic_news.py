@@ -3,6 +3,7 @@ from discord.ext import commands
 from core.classes import Cog_Extension
 import requests
 from bs4 import BeautifulSoup
+from discord import app_commands
 
 class Economic_News(Cog_Extension):
     

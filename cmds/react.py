@@ -3,6 +3,7 @@ from discord.ext import commands
 from core.classes import Cog_Extension
 import random
 import json
+from discord import app_commands
 
 with open("setting.json",'r',encoding='utf-8') as jfile:
     jdata=json.load(jfile)

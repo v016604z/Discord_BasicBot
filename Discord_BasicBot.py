@@ -16,7 +16,9 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 #bot啟動訊息
 @bot.event
 async def on_ready():                               
-    print(f'We have logged in as {bot.user}')
+    slash = await bot.tree.sync()
+    print(f"目前登入身份 --> {bot.user}")
+    print(f"載入 {len(slash)} 個斜線指令")
 
 #載入類別
 @bot.command()
